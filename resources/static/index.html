@@ -1,0 +1,44 @@
+
+<!doctype html>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="OrderController.js"></script>
+      <title>Order Web Controller</title>
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center" onload="loadOrders()">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <br></br>
+          <h1 class="masthead-brand">Order Controller</h1>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#">More Information...</a>
+          </nav>
+        </div>
+      </header>
+      <br></br>
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Orders Table</h1>
+        <br></br>
+        <a href="#" class="btn btn-secondary" role="button" onclick="agregarNuevaOrden()">New Order   »</a>
+        <a href="#" class="btn btn-secondary" role="button" onclick="generarTabla()">Consult Orders   »</a>
+        <a href="#" class="btn btn-secondary" role="button" onclick="removeOrderById(1)">Delete First Order   »</a>
+        <br></br>
+      </main>
+
+
+    </div>
+
+  </body>
+</html>
