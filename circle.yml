@@ -6,4 +6,4 @@ deployment:
   staging:
     branch: master
     heroku: 
-      appname: ordermanager79
+      appname: ordermanager79.git
