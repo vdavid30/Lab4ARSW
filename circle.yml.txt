@@ -10,4 +10,4 @@ deployment:
 	  
 test:
   override:
-    - echo "test"
+    - echo "done"
