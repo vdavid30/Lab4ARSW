@@ -7,3 +7,7 @@ deployment:
     branch: master
     heroku: 
       appname: ordermanager79
+	  
+test:
+  override:
+    - echo "test"
