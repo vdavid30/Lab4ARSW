@@ -43,6 +43,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.google.gson.reflect.TypeToken;
+import org.springframework.boot.autoconfigure.web.ErrorController;
 
 /**
  *
@@ -50,14 +51,24 @@ import com.google.gson.reflect.TypeToken;
  */
 @RestController
 @RequestMapping(value = "/orders")
-public class OrdersAPIController {
+public class OrdersAPIController implements ErrorController {
     @Autowired
     private final RestaurantOrderServicesStub restaurantStub;
 
     public OrdersAPIController(RestaurantOrderServicesStub restaurantStub){
         this.restaurantStub = restaurantStub;
     }
-    
+    private static final String PATH = "/error";
+
+    @RequestMapping(value = PATH)
+    public String error() {
+        return "Error handling";
+    }
+
+    @Override
+    public String getErrorPath() {
+        return PATH;
+    }
     @RequestMapping(method = RequestMethod.PUT, path = "/{idmesa}")
     public ResponseEntity<?> updateOrder(@PathVariable String idmesa, @RequestBody String nOrder){
         JSONObject obj =  new JSONObject(nOrder);
