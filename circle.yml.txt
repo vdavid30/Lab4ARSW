@@ -8,6 +8,3 @@ deployment:
     heroku: 
       appname: ordermanager79
 	  
-test:
-  override:
-    - echo "done"
