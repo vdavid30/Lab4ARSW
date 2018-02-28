@@ -21,7 +21,7 @@ Create a simple front end using the following frameworks:
  - [bootstrap](https://getbootstrap.com)
 
  - [axios](https://github.com/axios/axios)
-0
+ 
  - [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
 
 
@@ -48,21 +48,6 @@ Create a simple front end using the following frameworks:
 
 
 
-**Order 1:**
-
-
-
-
-
-  | Product | Quantity | Price | 
-
-  | ------------- | ----- |:-------------:| 
-
-  |PIZZA|3|$10000| 
-
-  |HOTDOG|1|$3000|
-
-  |COKE|4|$1300|
 
 
 
@@ -101,14 +86,8 @@ Create a simple front end using the following frameworks:
 			"quantity": 1,
 
 			"price": "$12.300"
-@hcadavid
-README updated
-21 days ago
 
 		}
-unknown
-README replaced
-7 days ago
 
 	]
 
