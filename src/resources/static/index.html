@@ -8,34 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+	<link rel="icon" href="https://getbootstrap.com/favicon.ico">
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/jquery-3.js"> <!--integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"--></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/OrdersController.js"></script>
 	<script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
+	<link href="./index_files/bootstrap.min.css" rel="stylesheet">
       <title>Order Web Controller</title>
-    <link href="cover.css" rel="stylesheet">
+    <link href="./index_files/cover.css" rel="stylesheet">
   </head>
 
   <body class="text-center" onload="loadOrders()">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex h-80 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <br></br>
-          <h1 class="masthead-brand">Order Controller</h1>
-          <nav class="nav nav-masthead justify-content-center">
+		  <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="#">Products</a>
             <a class="nav-link" href="#">More Information...</a>
           </nav>
+		  <br></br>
+          <h1 class="masthead-brand">Order Controller</h1>          
         </div>
       </header>
-      <br></br>
+	  
       <main role="main" class="inner cover" id="tablasActuales">
         <h1 class="cover-heading">Orders Table</h1>
-        <br></br>
         <a href="#" class="btn btn-secondary" role="button" onclick="agregarNuevaOrden()">New Order   »</a>
         <a href="#" class="btn btn-secondary" role="button" onclick="generarTabla()">Consult Orders   »</a>
         <a href="#" class="btn btn-secondary" role="button" onclick="removeOrderById(1)">Delete First Order   »</a>
