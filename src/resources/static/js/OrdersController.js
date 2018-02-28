@@ -91,28 +91,26 @@ function generarTablaPorOrden(newOrdObj) {
 	body.appendChild(espacio);
 }
 
-function agregarNuevaOrden(){
+function agregarNuevaOrden(){               
 	generarTablaPorOrden(newOrdObj);
+
+	
 }
 
-function removeOrderById(id){
+function removeOrderById(id){	
 	document.getElementById(id).innerHTML = "";
 }
 function loadOrders(){
-	var orders = [];
-	axios.get('/orders')
-			.then(function(result){
-				orders = result.data;
-				for(var i = 0; i < orders.length ; i++){
-					generarTablaPorOrden(orders[i]);
-				}
-			})
-		.catch(function (error) {
-			console.log("There is a problem with our servers. We apologize for the inconvince, please try again later");
-		});
+	generarTablaPorOrden(initialOrdObj);
+	axios.get("/orders")
+	.then(function (response){
+		var orders = response.data;
+		for(var i=0;i<orders.length;i++){
+				addNewOrder(orders[i]);
+		}
+	})
+	.catch(function (error){
+		console.log("There is a problem with our servers. We apologize for the inconvince, please try again later");
+	});
 
-}
-
-function getOrdersByAxios(){
-	return axios.get('/orders');
 }
